@@ -1,0 +1,43 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/dist/
+backend/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.envrc
+
+# Model weights and downloaded models
+*.gguf
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+
+# Build and cache
+dist/
+build/
+.cache/
+.vite/
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
