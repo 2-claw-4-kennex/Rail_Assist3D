@@ -1,8 +1,12 @@
-
-# Secrets
+﻿# Secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+.envrc
+secrets/
+credentials/
 
 # Node
 node_modules/
@@ -14,7 +18,8 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-.envrc
+.pytest_cache/
+.mypy_cache/
 
 # Model weights and downloaded models
 *.gguf
@@ -40,4 +45,3 @@ build/
 Thumbs.db
 .vscode/
 .idea/
-
