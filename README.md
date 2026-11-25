@@ -1,28 +1,50 @@
-# RailAssist 3D (Zero-Ollama Edition)
+# RailAssist 3D
 
-Self-contained kiosk with zero C: drive model downloads:
-- **No Ollama / No Whisper downloads** — runs in <25 MB Python packages + browser Web Speech API (`en-IN` English/Hinglish).
-- **Lucknow Board (`/api/board`)**: Served directly from `backend/data/lucknow_board.json`.
-- **Live Train Status**: Calls RailRadar (`GET /v1/trains/{number}/live`) strictly when a specific train is requested.
+A lightweight, voice-enabled 3D railway enquiry kiosk built with React, Three.js and FastAPI.
 
-## Run in 3 Steps (Windows PowerShell)
+### Features
+- **3D Avatar:** Interactive avatar-based kiosk interface.
+- **Voice Interaction:** Browser Web Speech API with English/Hinglish support.
+- **AI Assistance:** Gemini-powered railway enquiries.
+- **Station Board:** Lucknow arrivals and departures from local JSON data.
+- **Live Train Status:** On-demand train tracking through RailRadar API.
+- **Lightweight:** No Ollama or Whisper model downloads.
 
-1. Put your RailRadar key in `backend/.env`:
-   ```env
-   RAILRADAR_API_KEY=rg_your_key_here
-   ```
-2. Drop your rigged avatar at `frontend/public/models/avatar.glb`.
-3. Install & launch:
-   ```powershell
-   cd backend
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
+### Tech Stack
+React · Vite · Three.js · React Three Fiber · Python · FastAPI · Gemini API · RailRadar API · WebSockets
 
-   cd ..rontend
-   npm install
+### Run Locally
 
-   cd ..
-   .\start_kiosk.ps1
-   ```
-   Open `http://localhost:3000` in Chrome or Edge.
+**1. Configure `backend/.env`:**
+
+```env
+RAILRADAR_API_KEY=your_api_key
+```
+
+**2. Install dependencies:**
+
+```powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+cd ..\frontend
+npm install
+```
+
+**3. Launch:**
+
+```powershell
+cd ..
+.\start_kiosk.ps1
+```
+
+Open http://localhost:3000 in Chrome or Edge.
+
+### Deployment
+**Frontend:** [GitHub Pages]
+
+**Backend:** Local deployment currently; public hosting pending.
+
+]
